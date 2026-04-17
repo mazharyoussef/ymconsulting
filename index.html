@@ -11,7 +11,6 @@
 :root{--navy:#0D1B2A;--gold:#C9A84C;--gold-light:#E8C97A;--cream:#F7F4EF;--slate:#4A5568;--light:#FAFAF7;--white:#FFFFFF;--accent:#1A3A5C}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--light);overflow-x:hidden}
-
 nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 2rem}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo-nav{display:flex;align-items:center;gap:12px;text-decoration:none}
@@ -21,9 +20,6 @@ nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);b
 .nav-links{display:flex;gap:1.8rem;align-items:center}
 .nav-links a{color:rgba(255,255,255,0.72);text-decoration:none;font-size:13px;font-weight:400;letter-spacing:0.4px;transition:color 0.2s;cursor:pointer}
 .nav-links a:hover{color:var(--gold)}
-.nav-code{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);font-size:11px;font-weight:500;padding:5px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;transition:transform 0.2s}
-.nav-code:hover{transform:translateY(-1px)}
-
 #accueil{min-height:100vh;background:var(--navy);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:72px}
 .hero-bg{position:absolute;inset:0;opacity:0.035}
 .hero-bg svg{width:100%;height:100%}
@@ -39,21 +35,16 @@ nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);b
 .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
 .btn-outline{border:1px solid rgba(255,255,255,0.3);color:#fff;padding:14px 36px;border-radius:2px;font-size:13px;font-weight:400;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;background:transparent}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-.hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,0.3);font-size:10px;letter-spacing:2px;text-transform:uppercase}
-.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,transparent,var(--gold));animation:scrollAnim 2s infinite}
-
 .stats-bar{background:var(--gold);padding:1.5rem 2rem}
-.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center}
-.stat-item h3{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--navy)}
-.stat-item p{font-size:10px;font-weight:500;color:rgba(13,27,42,0.65);letter-spacing:1px;text-transform:uppercase}
-
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;text-align:center}
+.stat-item h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--navy)}
+.stat-item p{font-size:10px;font-weight:500;color:rgba(13,27,42,0.65);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
 .section{padding:6rem 2rem}
 .section-inner{max-width:1200px;margin:0 auto}
 .section-tag{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
 .section-tag::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold)}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1.5rem}
 .section-desc{font-size:15px;color:var(--slate);line-height:1.85;max-width:580px;font-weight:300}
-
 #metiers{background:var(--cream)}
 .tabs{display:flex;gap:0;margin-bottom:0;border-bottom:2px solid rgba(201,168,76,0.2);overflow-x:auto}
 .tab-btn{padding:14px 24px;font-size:12px;font-weight:500;letter-spacing:0.5px;color:var(--slate);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.2s;white-space:nowrap;margin-bottom:-2px;text-transform:uppercase}
@@ -67,15 +58,12 @@ nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);b
 .profils-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-bottom:2.5rem}
 .profil-card{background:#fff;padding:1.5rem;border:1px solid rgba(201,168,76,0.15);border-left:3px solid var(--gold);transition:all 0.2s}
 .profil-card:hover{transform:translateX(4px);border-left-color:var(--navy)}
-.profil-card .level{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
 .profil-card h4{font-size:14px;font-weight:500;color:var(--navy);line-height:1.4}
-.profil-card p{font-size:12px;color:var(--slate);margin-top:4px;font-weight:300;line-height:1.5}
 .missions-block{background:var(--navy);padding:2rem;margin-top:1rem}
 .missions-block h4{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
 .missions-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.75rem}
 .mission-item{display:flex;align-items:flex-start;gap:0.75rem;font-size:13px;color:rgba(255,255,255,0.7);font-weight:300;line-height:1.5}
 .mission-item::before{content:'→';color:var(--gold);font-size:12px;margin-top:1px;flex-shrink:0}
-
 #approche{background:var(--light)}
 .approche-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem}
 .etapes{display:flex;flex-direction:column;gap:0}
@@ -84,7 +72,7 @@ nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);b
 .etape-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:rgba(201,168,76,0.3);min-width:40px;line-height:1}
 .etape-content h4{font-size:15px;font-weight:500;color:var(--navy);margin-bottom:4px}
 .etape-content p{font-size:13px;color:var(--slate);font-weight:300;line-height:1.6}
-.about-visual-box{background:var(--navy);padding:3rem;position:relative}
+.about-visual-box{background:var(--navy);padding:3rem}
 .logo-big{text-align:center;padding:2rem 0}
 .logo-big-name{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#fff;letter-spacing:4px}
 .logo-big-name span{color:var(--gold)}
@@ -93,7 +81,6 @@ nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);b
 .logo-tagline{font-size:13px;color:rgba(255,255,255,0.45);text-align:center;line-height:1.7;font-weight:300;max-width:260px;margin:0 auto}
 .sector-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:2rem;justify-content:center}
 .sector-tag{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:1px solid rgba(201,168,76,0.25);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:20px}
-
 #secteurs{background:var(--navy)}
 .secteurs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.1);margin-top:3rem}
 .secteur-item{background:var(--navy);padding:2.5rem 2rem;transition:background 0.25s}
@@ -101,7 +88,6 @@ nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);b
 .secteur-icon{width:40px;height:40px;margin-bottom:1.25rem}
 .secteur-item h3{font-size:15px;font-weight:500;color:#fff;margin-bottom:0.75rem}
 .secteur-item p{font-size:12px;color:rgba(255,255,255,0.42);line-height:1.7;font-weight:300}
-
 #contact{background:var(--cream)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;margin-top:3rem}
 .contact-info{display:flex;flex-direction:column;gap:1.25rem}
@@ -109,7 +95,7 @@ nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);b
 .contact-icon{width:40px;height:40px;min-width:40px;background:var(--gold);display:flex;align-items:center;justify-content:center}
 .contact-icon svg{width:16px;height:16px}
 .contact-item h4{font-size:12px;font-weight:500;color:var(--navy);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px}
-.contact-item p{font-size:13px;color:var(--slate);font-weight:300}
+.contact-item p{font-size:13px;color:var(--slate);font-weight:300;line-height:1.6}
 .contact-form{display:flex;flex-direction:column;gap:1rem}
 .form-group{display:flex;flex-direction:column;gap:5px}
 .form-group label{font-size:11px;font-weight:500;color:var(--navy);letter-spacing:0.5px;text-transform:uppercase}
@@ -120,7 +106,11 @@ nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);b
 .submit-btn{background:var(--navy);color:#fff;padding:13px;border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:background 0.2s;margin-top:0.25rem}
 .submit-btn:hover{background:var(--accent)}
 .form-success{display:none;background:rgba(201,168,76,0.1);border:1px solid var(--gold);padding:1rem;font-size:13px;color:var(--navy);text-align:center;margin-top:0.5rem}
-
+.file-upload-label{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1px dashed rgba(13,27,42,0.25);background:#fff;cursor:pointer;transition:border-color 0.2s;font-size:13px;color:var(--slate);font-weight:300}
+.file-upload-label:hover{border-color:var(--gold);color:var(--navy)}
+.file-upload-label svg{width:16px;height:16px;flex-shrink:0}
+.file-name-display{font-size:11px;color:var(--gold);margin-top:4px;display:none}
+#fileInput{display:none}
 footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba(201,168,76,0.12)}
 .footer-inner{max-width:1200px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
@@ -131,13 +121,14 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center}
 .footer-copy{font-size:11px;color:rgba(255,255,255,0.28)}
 .footer-address{font-size:11px;color:rgba(201,168,76,0.45);letter-spacing:0.5px}
-
+/* ADMIN MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(13,27,42,0.88);z-index:9999;align-items:center;justify-content:center}
 .modal-overlay.open{display:flex}
 .modal{background:#fff;max-width:460px;width:90%;padding:3rem;position:relative;border-top:4px solid var(--gold);max-height:90vh;overflow-y:auto}
 .modal-close{position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;cursor:pointer;font-size:20px;color:var(--slate)}
 .modal h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem}
 .modal-desc{font-size:13px;color:var(--slate);margin-bottom:1.5rem}
+.admin-badge{display:inline-block;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:1rem}
 .section-codes{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.75rem}
 .code-item{display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:var(--cream);cursor:pointer;font-size:13px;border-left:3px solid transparent;transition:all 0.2s}
 .code-item:hover{background:rgba(201,168,76,0.1);border-left-color:var(--gold)}
@@ -147,23 +138,21 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
 .code-input-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;margin-bottom:0.75rem}
 .code-input-row input{height:52px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;border:1px solid rgba(13,27,42,0.2);color:var(--navy);background:#fff;outline:none}
 .code-input-row input:focus{border-color:var(--gold)}
-.code-hint{font-size:11px;color:rgba(13,27,42,0.38);text-align:center;margin-bottom:1.25rem;letter-spacing:0.5px}
+.code-hint{font-size:11px;color:rgba(13,27,42,0.38);text-align:center;margin-bottom:1.25rem}
 .code-submit{width:100%;background:var(--navy);color:#fff;padding:13px;border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:background 0.2s}
 .code-submit:hover{background:var(--accent)}
 .code-error{font-size:12px;color:#e24b4a;text-align:center;margin-top:0.5rem;display:none}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-@keyframes scrollAnim{0%,100%{opacity:0;transform:scaleY(0.5)}50%{opacity:1;transform:scaleY(1)}}
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.65s ease,transform 0.65s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
-
 @media(max-width:768px){
   .approche-grid,.contact-grid,.footer-top{grid-template-columns:1fr}
   .secteurs-grid{grid-template-columns:1fr}
-  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stats-inner{grid-template-columns:1fr}
   .nav-links{display:none}
   .hero-ctas{flex-direction:column;align-items:center}
   .profils-grid{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -186,11 +175,9 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
       <a href="#secteurs">Secteurs</a>
       <a href="#contact">Contact</a>
     </div>
-    <button class="nav-code" onclick="openModal()">Accès Codes ▸</button>
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="accueil">
   <div class="hero-bg">
     <svg viewBox="0 0 1200 700"><line x1="0" y1="350" x2="1200" y2="350" stroke="#C9A84C" stroke-width="0.5"/><line x1="600" y1="0" x2="600" y2="700" stroke="#C9A84C" stroke-width="0.5"/><rect x="200" y="100" width="800" height="500" stroke="#C9A84C" stroke-width="0.3" fill="none"/><circle cx="600" cy="350" r="200" stroke="#C9A84C" stroke-width="0.3" fill="none"/><circle cx="600" cy="350" r="100" stroke="#C9A84C" stroke-width="0.3" fill="none"/></svg>
@@ -198,7 +185,7 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
   <div class="hero-content">
     <div class="hero-badge">Cabinet de Recrutement Spécialisé — Paris 8e</div>
     <h1 class="hero-title">YM<br><span>Consulting</span></h1>
-    <p class="hero-sub">Nous accompagnons les cabinets d'audit, d'expertise comptable et les directions financières dans le recrutement de leurs talents — du profil junior au futur associé.</p>
+    <p class="hero-sub">Nous accompagnons les cabinets d'audit, d'expertise comptable et les directions financières dans le recrutement de leurs talents.</p>
     <div class="hero-pills">
       <span class="hero-pill">Expertise Comptable</span>
       <span class="hero-pill">Audit</span>
@@ -210,20 +197,16 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
       <a href="#contact" class="btn-outline">Nous Contacter</a>
     </div>
   </div>
-  <div class="hero-scroll"><div class="scroll-line"></div><span>Défiler</span></div>
 </section>
 
-<!-- STATS -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-item"><h3>+200</h3><p>Placements réalisés</p></div>
     <div class="stat-item"><h3>4</h3><p>Pôles d'expertise</p></div>
-    <div class="stat-item"><h3>48h</h3><p>Délai de réponse</p></div>
+    <div class="stat-item"><h3>24 – 72h</h3><p>Pour une première sélection de profils</p></div>
     <div class="stat-item"><h3>97%</h3><p>Taux de satisfaction</p></div>
   </div>
 </div>
 
-<!-- MÉTIERS -->
 <section id="metiers" class="section">
   <div class="section-inner">
     <div class="section-tag">Nos métiers</div>
@@ -242,12 +225,13 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
         <p>Recrutement spécialisé pour les cabinets d'expertise comptable, de la prise de poste junior à la future association. Nous identifions des profils qualifiés, motivés et alignés avec la culture de votre cabinet.</p>
       </div>
       <div class="profils-grid">
-        <div class="profil-card"><div class="level">Niveau 1</div><h4>Assistant Comptable</h4><p>BTS/DCG — 0 à 2 ans</p></div>
-        <div class="profil-card"><div class="level">Niveau 2</div><h4>Collaborateur Comptable</h4><p>DCG/DSCG — 2 à 5 ans</p></div>
-        <div class="profil-card"><div class="level">Niveau 3</div><h4>Chef de Mission</h4><p>DSCG/DEC — 5 à 8 ans</p></div>
-        <div class="profil-card"><div class="level">Niveau 4</div><h4>Manager Expertise</h4><p>Expert-Comptable stagiaire — 8 à 12 ans</p></div>
-        <div class="profil-card"><div class="level">Niveau 5</div><h4>Expert-Comptable Diplômé</h4><p>DEC — Profil confirmé senior</p></div>
-        <div class="profil-card"><div class="level">Niveau 6</div><h4>Futur Associé</h4><p>Profil d'entrée au capital</p></div>
+        <div class="profil-card"><h4>Assistant Comptable</h4></div>
+        <div class="profil-card"><h4>Collaborateur Comptable</h4></div>
+        <div class="profil-card"><h4>Collaborateur Comptable Confirmé / Senior</h4></div>
+        <div class="profil-card"><h4>Chef de Mission / Manager Expertise Comptable</h4></div>
+        <div class="profil-card"><h4>Expert-Comptable Diplômé — Salarié</h4></div>
+        <div class="profil-card"><h4>Expert-Comptable Diplômé — Futur Associé</h4></div>
+        <div class="profil-card"><h4>Expert-Comptable Stagiaire / Mémorialiste</h4></div>
       </div>
       <div class="missions-block">
         <h4>Missions types recrutées</h4>
@@ -265,15 +249,16 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
     <div class="tab-panel" id="tab-audit">
       <div class="metier-header">
         <h3>Audit</h3>
-        <p>De l'auditeur junior débutant sa carrière au futur associé commissaire aux comptes, nous accompagnons les cabinets d'audit dans la constitution et le renforcement de leurs équipes.</p>
+        <p>De l'auditeur junior au commissaire aux comptes, nous accompagnons les cabinets d'audit dans la constitution et le renforcement de leurs équipes.</p>
       </div>
       <div class="profils-grid">
-        <div class="profil-card"><div class="level">Niveau 1</div><h4>Auditeur Junior</h4><p>Bac+5 — 0 à 2 ans</p></div>
-        <div class="profil-card"><div class="level">Niveau 2</div><h4>Auditeur Senior</h4><p>2 à 5 ans d'expérience</p></div>
-        <div class="profil-card"><div class="level">Niveau 3</div><h4>Superviseur Audit</h4><p>5 à 7 ans — Gestion d'équipe</p></div>
-        <div class="profil-card"><div class="level">Niveau 4</div><h4>Manager Audit</h4><p>7 à 10 ans — Pilotage missions</p></div>
-        <div class="profil-card"><div class="level">Niveau 5</div><h4>Directeur de Mission</h4><p>Profil Senior 10 ans+</p></div>
-        <div class="profil-card"><div class="level">Niveau 6</div><h4>Associé / Futur Associé</h4><p>CAC signataire ou en devenir</p></div>
+        <div class="profil-card"><h4>Auditeur Junior</h4></div>
+        <div class="profil-card"><h4>Auditeur Confirmé</h4></div>
+        <div class="profil-card"><h4>Auditeur Senior</h4></div>
+        <div class="profil-card"><h4>Superviseur Audit</h4></div>
+        <div class="profil-card"><h4>Chef de Mission / Manager Audit</h4></div>
+        <div class="profil-card"><h4>Directeur de Mission</h4></div>
+        <div class="profil-card"><h4>Commissaire aux Comptes (CAC)</h4></div>
       </div>
       <div class="missions-block">
         <h4>Missions types recrutées</h4>
@@ -296,26 +281,30 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
         <p>Nous recrutons des profils de haute valeur pour les missions d'accompagnement des directions financières, d'optimisation de la fonction finance et de management de transition.</p>
       </div>
       <div class="profils-grid">
-        <div class="profil-card"><div class="level">Profil</div><h4>RAF Externalisé</h4><p>Responsable Admin. &amp; Financier</p></div>
-        <div class="profil-card"><div class="level">Profil</div><h4>DAF Externalisé</h4><p>Direction Financière à temps partagé</p></div>
-        <div class="profil-card"><div class="level">Profil</div><h4>Manager de Transition</h4><p>Mission courte à moyenne durée</p></div>
-        <div class="profil-card"><div class="level">Profil</div><h4>Consultant Finance</h4><p>Accompagnement direction financière</p></div>
-        <div class="profil-card"><div class="level">Profil</div><h4>Contrôleur de Gestion</h4><p>Junior à Senior / Confirmé</p></div>
-        <div class="profil-card"><div class="level">Profil</div><h4>Directeur Financier</h4><p>Profil C-Level expérimenté</p></div>
+        <div class="profil-card"><h4>RAF Externalisé</h4></div>
+        <div class="profil-card"><h4>DAF Externalisé</h4></div>
+        <div class="profil-card"><h4>Manager de Transition</h4></div>
+        <div class="profil-card"><h4>Consultant Finance</h4></div>
+        <div class="profil-card"><h4>Contrôleur de Gestion</h4></div>
+        <div class="profil-card"><h4>Directeur Financier</h4></div>
       </div>
       <div class="missions-block">
         <h4>Missions types recrutées</h4>
         <div class="missions-list">
           <div class="mission-item">Accompagnement et structuration de la direction financière</div>
+          <div class="mission-item">RAF / DAF externalisé ou à temps partagé</div>
+          <div class="mission-item">Management de transition en période de crise ou de croissance</div>
+          <div class="mission-item">Consolidation, contrôle de gestion &amp; expertise IFRS</div>
           <div class="mission-item">Optimisation de la fonction finance et des processus</div>
-          <div class="mission-item">Mission de RAF ou DAF externalisé / temps partagé</div>
-          <div class="mission-item">Management de transition en période de crise ou croissance</div>
+          <div class="mission-item">Trésorerie &amp; gestion des risques financiers</div>
+          <div class="mission-item">Audit &amp; contrôle interne</div>
+          <div class="mission-item">Digitalisation &amp; pilotage de la performance</div>
+          <div class="mission-item">Accompagnement des directions comptables</div>
           <div class="mission-item">Mise en place d'outils de pilotage et reporting</div>
-          <div class="mission-item">Accompagnement à la levée de fonds et due diligence</div>
           <div class="mission-item">Restructuration et optimisation des coûts</div>
           <div class="mission-item">Préparation à la transmission ou cession d'entreprise</div>
           <div class="mission-item">Déploiement ERP et digitalisation de la finance</div>
-          <div class="mission-item">Contrôle de gestion et construction budgétaire</div>
+          <div class="mission-item">Construction budgétaire et prévisions financières</div>
         </div>
       </div>
     </div>
@@ -323,15 +312,15 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
     <div class="tab-panel" id="tab-social">
       <div class="metier-header">
         <h3>Social &amp; Juridique</h3>
-        <p>Spécialistes du recrutement en droit social et droit des affaires, nous vous accompagnons dans la recherche de gestionnaires de paie, responsables RH/sociaux et juristes d'entreprise.</p>
+        <p>Spécialistes du recrutement en droit social et droit des affaires, nous vous accompagnons dans la recherche de gestionnaires de paie, responsables sociaux et juristes d'entreprise.</p>
       </div>
       <div class="profils-grid">
-        <div class="profil-card"><div class="level">Niveau 1</div><h4>Gestionnaire de Paie Junior</h4><p>0 à 2 ans — logiciels paie</p></div>
-        <div class="profil-card"><div class="level">Niveau 2</div><h4>Gestionnaire de Paie Senior</h4><p>3 à 7 ans — multi-conventions</p></div>
-        <div class="profil-card"><div class="level">Niveau 3</div><h4>Responsable Social</h4><p>Pilotage d'un service paie/RH</p></div>
-        <div class="profil-card"><div class="level">Niveau 4</div><h4>Chef de Département Social</h4><p>Management équipe &amp; stratégie</p></div>
-        <div class="profil-card"><div class="level">Niveau 5</div><h4>Juriste Droit Social</h4><p>Relations collectives, contentieux</p></div>
-        <div class="profil-card"><div class="level">Niveau 6</div><h4>Juriste Droit des Affaires</h4><p>Contrats, M&amp;A, conformité</p></div>
+        <div class="profil-card"><h4>Gestionnaire de Paie Junior</h4></div>
+        <div class="profil-card"><h4>Gestionnaire de Paie Senior</h4></div>
+        <div class="profil-card"><h4>Responsable Social</h4></div>
+        <div class="profil-card"><h4>Chef de Département Social</h4></div>
+        <div class="profil-card"><h4>Juriste Droit Social</h4></div>
+        <div class="profil-card"><h4>Juriste Droit des Affaires</h4></div>
       </div>
       <div class="missions-block">
         <h4>Missions types recrutées</h4>
@@ -350,7 +339,6 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
   </div>
 </section>
 
-<!-- APPROCHE -->
 <section id="approche" class="section">
   <div class="section-inner">
     <div class="approche-grid fade-in">
@@ -361,7 +349,7 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
         <div class="etapes">
           <div class="etape"><span class="etape-num">01</span><div class="etape-content"><h4>Analyse du besoin</h4><p>Compréhension précise du poste, de la culture du cabinet et des critères de sélection</p></div></div>
           <div class="etape"><span class="etape-num">02</span><div class="etape-content"><h4>Sourcing ciblé</h4><p>Identification des profils via notre réseau, approche directe et bases candidats qualifiées</p></div></div>
-          <div class="etape"><span class="etape-num">03</span><div class="etape-content"><h4>Évaluation approfondie</h4><p>Entretiens de qualification technique et comportemental, vérification des références</p></div></div>
+          <div class="etape"><span class="etape-num">03</span><div class="etape-content"><h4>Évaluation approfondie</h4><p>Entretiens de qualification technique et vérification des références</p></div></div>
           <div class="etape"><span class="etape-num">04</span><div class="etape-content"><h4>Présentation &amp; Suivi</h4><p>Présentation d'une shortlist qualifiée et accompagnement jusqu'à l'intégration</p></div></div>
         </div>
       </div>
@@ -389,7 +377,6 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
   </div>
 </section>
 
-<!-- SECTEURS -->
 <section id="secteurs" class="section">
   <div class="section-inner">
     <div class="section-tag" style="color:var(--gold)">Secteurs clients</div>
@@ -429,14 +416,13 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section">
   <div class="section-inner">
     <div class="section-tag">Contact</div>
     <h2 class="section-title">Parlons de<br>votre besoin</h2>
     <div class="contact-grid fade-in">
       <div>
-        <p class="section-desc" style="margin-bottom:2rem">Vous avez un poste à pourvoir ou souhaitez rejoindre notre réseau de candidats ? Contactez-nous, nous vous répondons sous 48h.</p>
+        <p class="section-desc" style="margin-bottom:2rem">Vous avez un poste à pourvoir ou souhaitez rejoindre notre réseau de candidats ? Contactez-nous, nous vous répondons sous 24 à 72h.</p>
         <div class="contact-info">
           <div class="contact-item">
             <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
@@ -444,11 +430,7 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
           </div>
           <div class="contact-item">
             <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
-            <div><h4>Téléphone</h4><p>+33 6 52 25 94 13</p></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-            <div><h4>Email</h4><p>contact@ymconsulting.fr</p></div>
+            <div><h4>Téléphone &amp; Email</h4><p>+33 6 52 25 94 13<br>contact@ymconsulting.fr</p></div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
@@ -463,7 +445,7 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
         </div>
         <div class="form-group"><label>Email</label><input type="email" placeholder="email@cabinet.fr"></div>
         <div class="form-group"><label>Vous êtes</label>
-          <select>
+          <select id="profilSelect">
             <option value="">Sélectionner votre profil</option>
             <option>Un cabinet souhaitant recruter</option>
             <option>Un candidat en recherche active</option>
@@ -471,17 +453,31 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
           </select>
         </div>
         <div class="form-group"><label>Pôle concerné</label>
-          <select>
+          <select id="poleSelect" onchange="handlePole()">
             <option value="">Sélectionner un pôle</option>
             <option>Expertise Comptable</option>
             <option>Audit</option>
             <option>Conseil &amp; Finance</option>
             <option>Social &amp; Juridique</option>
+            <option value="autre">Autre</option>
           </select>
         </div>
+        <div class="form-group" id="autreGroup" style="display:none">
+          <label>Précisez votre besoin</label>
+          <input type="text" id="autreInput" placeholder="Décrivez votre domaine ou besoin spécifique...">
+        </div>
         <div class="form-group"><label>Message</label><textarea placeholder="Décrivez votre besoin, le poste recherché ou votre profil..."></textarea></div>
+        <div class="form-group">
+          <label>Joindre un fichier <span style="font-weight:300;text-transform:none;letter-spacing:0;font-size:11px;color:var(--slate)">(optionnel — CV, fiche de poste...)</span></label>
+          <label class="file-upload-label" for="fileInput">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8"><path d="M12 16V4m0 0l-3 3m3-3l3 3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 16v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2" stroke-linecap="round"/></svg>
+            <span id="fileLabel">Cliquez pour sélectionner un fichier (PDF, Word...)</span>
+          </label>
+          <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.jpg,.png" onchange="updateFileName()">
+          <span class="file-name-display" id="fileNameDisplay"></span>
+        </div>
         <button class="submit-btn" onclick="submitForm()">Envoyer la demande →</button>
-        <div class="form-success" id="formSuccess">✓ Message envoyé. Nous vous recontactons sous 48h ouvrées.</div>
+        <div class="form-success" id="formSuccess">✓ Message envoyé. Nous vous recontactons sous 24 à 72h ouvrées.</div>
       </div>
     </div>
   </div>
@@ -507,7 +503,6 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
         <a href="#approche">Notre Approche</a>
         <a href="#secteurs">Secteurs</a>
         <a href="#contact">Contact</a>
-        <a href="#" onclick="openModal();return false;">Codes d'accès</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -517,12 +512,13 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
   </div>
 </footer>
 
-<!-- MODAL CODES -->
+<!-- ADMIN PANEL — shortcut Y then M to open -->
 <div class="modal-overlay" id="codeModal">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <h2>Codes d'accès</h2>
-    <p class="modal-desc">Cliquez sur une section ou saisissez son code pour y accéder directement.</p>
+    <div class="admin-badge">Accès Administrateur</div>
+    <h2>Navigation rapide</h2>
+    <p class="modal-desc">Panneau d'accès réservé. Cliquez sur une section ou saisissez son code.</p>
     <div class="section-codes">
       <div class="code-item" onclick="goToSection('accueil')"><strong>Accueil</strong><span class="code-val">1000</span></div>
       <div class="code-item" onclick="goToSection('metiers')"><strong>Nos Métiers</strong><span class="code-val">2000</span></div>
@@ -539,31 +535,52 @@ footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba
     </div>
     <div class="code-hint">Codes : 1000 · 2000 · 3000 · 4000 · 5000</div>
     <button class="code-submit" onclick="checkCode()">Accéder →</button>
-    <div class="code-error" id="codeError">Code invalide. Consultez la liste ci-dessus.</div>
+    <div class="code-error" id="codeError">Code invalide.</div>
   </div>
 </div>
 
 <script>
-const codes={'1000':'accueil','2000':'metiers','3000':'approche','4000':'secteurs','5000':'contact'};
-function openModal(){document.getElementById('codeModal').classList.add('open')}
-function closeModal(){document.getElementById('codeModal').classList.remove('open');document.getElementById('codeError').style.display='none';['d1','d2','d3','d4'].forEach(function(id){document.getElementById(id).value=''})}
-document.getElementById('codeModal').addEventListener('click',function(e){if(e.target===this)closeModal()});
-function goToSection(id){closeModal();setTimeout(function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})},200)}
-function handleInput(el,prevId,nextId){if(el.value&&nextId)document.getElementById(nextId).focus()}
+var lastKey='',lastTime=0;
+document.addEventListener('keydown',function(e){
+  var now=Date.now();
+  if(e.key.toLowerCase()==='y'){lastKey='y';lastTime=now;}
+  else if(e.key.toLowerCase()==='m'&&lastKey==='y'&&(now-lastTime)<1000){openModal();lastKey='';}
+  else{lastKey='';}
+});
+var codes={'1000':'accueil','2000':'metiers','3000':'approche','4000':'secteurs','5000':'contact'};
+function openModal(){document.getElementById('codeModal').classList.add('open');}
+function closeModal(){document.getElementById('codeModal').classList.remove('open');document.getElementById('codeError').style.display='none';['d1','d2','d3','d4'].forEach(function(id){document.getElementById(id).value='';})}
+document.getElementById('codeModal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+function goToSection(id){closeModal();setTimeout(function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});},200);}
+function handleInput(el,prevId,nextId){if(el.value&&nextId)document.getElementById(nextId).focus();}
 function checkCode(){
-  var code=['d1','d2','d3','d4'].map(function(id){return document.getElementById(id).value}).join('');
+  var code=['d1','d2','d3','d4'].map(function(id){return document.getElementById(id).value;}).join('');
   var err=document.getElementById('codeError');
-  if(codes[code]){err.style.display='none';goToSection(codes[code])}
-  else{err.style.display='block'}
+  if(codes[code]){err.style.display='none';goToSection(codes[code]);}
+  else{err.style.display='block';}
 }
 function switchTab(id){
   var ids=['ec','audit','conseil','social'];
-  document.querySelectorAll('.tab-btn').forEach(function(b,i){b.classList.toggle('active',ids[i]===id)});
-  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.toggle('active',p.id==='tab-'+id)});
+  document.querySelectorAll('.tab-btn').forEach(function(b,i){b.classList.toggle('active',ids[i]===id);});
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.toggle('active',p.id==='tab-'+id);});
 }
-function submitForm(){var s=document.getElementById('formSuccess');s.style.display='block';setTimeout(function(){s.style.display='none'},5000)}
-var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.12});
-document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el)});
+function handlePole(){
+  var v=document.getElementById('poleSelect').value;
+  document.getElementById('autreGroup').style.display=(v==='autre')?'flex':'none';
+}
+function updateFileName(){
+  var f=document.getElementById('fileInput').files[0];
+  var fn=document.getElementById('fileNameDisplay');
+  var fl=document.getElementById('fileLabel');
+  if(f){fn.style.display='block';fn.textContent='✓ Fichier sélectionné : '+f.name;fl.textContent='Cliquez pour changer le fichier';}
+}
+function submitForm(){
+  var s=document.getElementById('formSuccess');
+  s.style.display='block';
+  setTimeout(function(){s.style.display='none';},6000);
+}
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.12});
+document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});
 </script>
 </body>
 </html>
