@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YM Consulting — Cabinet de Recrutement Spécialisé | Paris</title>
+<meta name="description" content="YM Consulting, cabinet de recrutement spécialisé dans les métiers du chiffre, de l'audit, de l'expertise comptable, du conseil financier et du droit. Basé à Paris 8e.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0D1B2A;--gold:#C9A84C;--gold-light:#E8C97A;--cream:#F7F4EF;--slate:#4A5568;--light:#FAFAF7;--white:#FFFFFF;--accent:#1A3A5C}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--light);overflow-x:hidden}
+
+nav{position:fixed;top:0;width:100%;z-index:999;background:rgba(13,27,42,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 2rem}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo-nav{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-icon{width:40px;height:40px}
+.logo-text-nav{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:#fff;letter-spacing:1px}
+.logo-text-nav span{color:var(--gold)}
+.nav-links{display:flex;gap:1.8rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.72);text-decoration:none;font-size:13px;font-weight:400;letter-spacing:0.4px;transition:color 0.2s;cursor:pointer}
+.nav-links a:hover{color:var(--gold)}
+.nav-code{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);font-size:11px;font-weight:500;padding:5px 14px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;transition:transform 0.2s}
+.nav-code:hover{transform:translateY(-1px)}
+
+#accueil{min-height:100vh;background:var(--navy);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:72px}
+.hero-bg{position:absolute;inset:0;opacity:0.035}
+.hero-bg svg{width:100%;height:100%}
+.hero-content{text-align:center;z-index:2;padding:2rem;max-width:820px}
+.hero-badge{display:inline-block;border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:6px 20px;border-radius:20px;margin-bottom:2rem;animation:fadeUp 0.8s ease both}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6.5vw,5.5rem);font-weight:700;color:#fff;line-height:1.05;margin-bottom:1rem;animation:fadeUp 0.8s 0.15s ease both}
+.hero-title span{color:var(--gold)}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.58);line-height:1.85;max-width:580px;margin:0 auto 2.5rem;font-weight:300;animation:fadeUp 0.8s 0.3s ease both}
+.hero-pills{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem;animation:fadeUp 0.8s 0.4s ease both}
+.hero-pill{border:1px solid rgba(201,168,76,0.3);color:rgba(255,255,255,0.65);font-size:11px;padding:5px 14px;border-radius:20px;letter-spacing:0.5px}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.8s 0.5s ease both}
+.btn-primary{background:var(--gold);color:var(--navy);padding:14px 36px;border:none;border-radius:2px;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-outline{border:1px solid rgba(255,255,255,0.3);color:#fff;padding:14px 36px;border-radius:2px;font-size:13px;font-weight:400;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;background:transparent}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,0.3);font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,transparent,var(--gold));animation:scrollAnim 2s infinite}
+
+.stats-bar{background:var(--gold);padding:1.5rem 2rem}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center}
+.stat-item h3{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--navy)}
+.stat-item p{font-size:10px;font-weight:500;color:rgba(13,27,42,0.65);letter-spacing:1px;text-transform:uppercase}
+
+.section{padding:6rem 2rem}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-tag{font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+.section-tag::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold)}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1.5rem}
+.section-desc{font-size:15px;color:var(--slate);line-height:1.85;max-width:580px;font-weight:300}
+
+#metiers{background:var(--cream)}
+.tabs{display:flex;gap:0;margin-bottom:0;border-bottom:2px solid rgba(201,168,76,0.2);overflow-x:auto}
+.tab-btn{padding:14px 24px;font-size:12px;font-weight:500;letter-spacing:0.5px;color:var(--slate);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all 0.2s;white-space:nowrap;margin-bottom:-2px;text-transform:uppercase}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+.tab-btn:hover{color:var(--navy)}
+.tab-panel{display:none;padding-top:2.5rem}
+.tab-panel.active{display:block}
+.metier-header{margin-bottom:2rem}
+.metier-header h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem}
+.metier-header p{font-size:14px;color:var(--slate);max-width:600px;line-height:1.75;font-weight:300}
+.profils-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-bottom:2.5rem}
+.profil-card{background:#fff;padding:1.5rem;border:1px solid rgba(201,168,76,0.15);border-left:3px solid var(--gold);transition:all 0.2s}
+.profil-card:hover{transform:translateX(4px);border-left-color:var(--navy)}
+.profil-card .level{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.profil-card h4{font-size:14px;font-weight:500;color:var(--navy);line-height:1.4}
+.profil-card p{font-size:12px;color:var(--slate);margin-top:4px;font-weight:300;line-height:1.5}
+.missions-block{background:var(--navy);padding:2rem;margin-top:1rem}
+.missions-block h4{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.missions-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.75rem}
+.mission-item{display:flex;align-items:flex-start;gap:0.75rem;font-size:13px;color:rgba(255,255,255,0.7);font-weight:300;line-height:1.5}
+.mission-item::before{content:'→';color:var(--gold);font-size:12px;margin-top:1px;flex-shrink:0}
+
+#approche{background:var(--light)}
+.approche-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem}
+.etapes{display:flex;flex-direction:column;gap:0}
+.etape{display:flex;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid rgba(13,27,42,0.08)}
+.etape:last-child{border-bottom:none}
+.etape-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:rgba(201,168,76,0.3);min-width:40px;line-height:1}
+.etape-content h4{font-size:15px;font-weight:500;color:var(--navy);margin-bottom:4px}
+.etape-content p{font-size:13px;color:var(--slate);font-weight:300;line-height:1.6}
+.about-visual-box{background:var(--navy);padding:3rem;position:relative}
+.logo-big{text-align:center;padding:2rem 0}
+.logo-big-name{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:#fff;letter-spacing:4px}
+.logo-big-name span{color:var(--gold)}
+.logo-big-sub{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:rgba(201,168,76,0.6);margin-top:6px}
+.logo-divider{width:40px;height:1px;background:var(--gold);margin:1.5rem auto}
+.logo-tagline{font-size:13px;color:rgba(255,255,255,0.45);text-align:center;line-height:1.7;font-weight:300;max-width:260px;margin:0 auto}
+.sector-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:2rem;justify-content:center}
+.sector-tag{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:1px solid rgba(201,168,76,0.25);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:20px}
+
+#secteurs{background:var(--navy)}
+.secteurs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.1);margin-top:3rem}
+.secteur-item{background:var(--navy);padding:2.5rem 2rem;transition:background 0.25s}
+.secteur-item:hover{background:rgba(201,168,76,0.05)}
+.secteur-icon{width:40px;height:40px;margin-bottom:1.25rem}
+.secteur-item h3{font-size:15px;font-weight:500;color:#fff;margin-bottom:0.75rem}
+.secteur-item p{font-size:12px;color:rgba(255,255,255,0.42);line-height:1.7;font-weight:300}
+
+#contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;margin-top:3rem}
+.contact-info{display:flex;flex-direction:column;gap:1.25rem}
+.contact-item{display:flex;align-items:flex-start;gap:1.25rem;padding:1.25rem;background:#fff;border:1px solid rgba(201,168,76,0.15)}
+.contact-icon{width:40px;height:40px;min-width:40px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.contact-icon svg{width:16px;height:16px}
+.contact-item h4{font-size:12px;font-weight:500;color:var(--navy);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px}
+.contact-item p{font-size:13px;color:var(--slate);font-weight:300}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group label{font-size:11px;font-weight:500;color:var(--navy);letter-spacing:0.5px;text-transform:uppercase}
+.form-group input,.form-group textarea,.form-group select{padding:11px 14px;border:1px solid rgba(13,27,42,0.2);background:#fff;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--navy);outline:none;transition:border-color 0.2s;border-radius:0}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{height:100px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.submit-btn{background:var(--navy);color:#fff;padding:13px;border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:background 0.2s;margin-top:0.25rem}
+.submit-btn:hover{background:var(--accent)}
+.form-success{display:none;background:rgba(201,168,76,0.1);border:1px solid var(--gold);padding:1rem;font-size:13px;color:var(--navy);text-align:center;margin-top:0.5rem}
+
+footer{background:var(--navy);padding:3rem 2rem 1.5rem;border-top:1px solid rgba(201,168,76,0.12)}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2rem}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.38);line-height:1.7;font-weight:300;max-width:280px;margin-top:1rem}
+.footer-col h4{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.footer-col a{display:block;font-size:12px;color:rgba(255,255,255,0.45);text-decoration:none;margin-bottom:8px;transition:color 0.2s;cursor:pointer}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.28)}
+.footer-address{font-size:11px;color:rgba(201,168,76,0.45);letter-spacing:0.5px}
+
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(13,27,42,0.88);z-index:9999;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;max-width:460px;width:90%;padding:3rem;position:relative;border-top:4px solid var(--gold);max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;cursor:pointer;font-size:20px;color:var(--slate)}
+.modal h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem}
+.modal-desc{font-size:13px;color:var(--slate);margin-bottom:1.5rem}
+.section-codes{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.75rem}
+.code-item{display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:var(--cream);cursor:pointer;font-size:13px;border-left:3px solid transparent;transition:all 0.2s}
+.code-item:hover{background:rgba(201,168,76,0.1);border-left-color:var(--gold)}
+.code-item strong{font-weight:500;color:var(--navy)}
+.code-item .code-val{font-size:10px;font-weight:500;letter-spacing:2px;background:var(--gold);color:var(--navy);padding:3px 10px;border-radius:20px}
+.code-sep{font-size:11px;color:var(--slate);margin-bottom:0.75rem}
+.code-input-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;margin-bottom:0.75rem}
+.code-input-row input{height:52px;text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;border:1px solid rgba(13,27,42,0.2);color:var(--navy);background:#fff;outline:none}
+.code-input-row input:focus{border-color:var(--gold)}
+.code-hint{font-size:11px;color:rgba(13,27,42,0.38);text-align:center;margin-bottom:1.25rem;letter-spacing:0.5px}
+.code-submit{width:100%;background:var(--navy);color:#fff;padding:13px;border:none;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:background 0.2s}
+.code-submit:hover{background:var(--accent)}
+.code-error{font-size:12px;color:#e24b4a;text-align:center;margin-top:0.5rem;display:none}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scrollAnim{0%,100%{opacity:0;transform:scaleY(0.5)}50%{opacity:1;transform:scaleY(1)}}
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.65s ease,transform 0.65s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  .approche-grid,.contact-grid,.footer-top{grid-template-columns:1fr}
+  .secteurs-grid{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+  .hero-ctas{flex-direction:column;align-items:center}
+  .profils-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo-nav" href="#accueil">
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+        <polygon points="5,32 13,8 20,24 27,8 35,32" fill="none" stroke="#C9A84C" stroke-width="2.2" stroke-linejoin="round"/>
+        <line x1="5" y1="32" x2="35" y2="32" stroke="#C9A84C" stroke-width="2.2"/>
+        <circle cx="20" cy="6" r="3" fill="#C9A84C"/>
+      </svg>
+      <span class="logo-text-nav">YM <span>Consulting</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#metiers">Métiers</a>
+      <a href="#approche">Notre Approche</a>
+      <a href="#secteurs">Secteurs</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-code" onclick="openModal()">Accès Codes ▸</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="accueil">
+  <div class="hero-bg">
+    <svg viewBox="0 0 1200 700"><line x1="0" y1="350" x2="1200" y2="350" stroke="#C9A84C" stroke-width="0.5"/><line x1="600" y1="0" x2="600" y2="700" stroke="#C9A84C" stroke-width="0.5"/><rect x="200" y="100" width="800" height="500" stroke="#C9A84C" stroke-width="0.3" fill="none"/><circle cx="600" cy="350" r="200" stroke="#C9A84C" stroke-width="0.3" fill="none"/><circle cx="600" cy="350" r="100" stroke="#C9A84C" stroke-width="0.3" fill="none"/></svg>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">Cabinet de Recrutement Spécialisé — Paris 8e</div>
+    <h1 class="hero-title">YM<br><span>Consulting</span></h1>
+    <p class="hero-sub">Nous accompagnons les cabinets d'audit, d'expertise comptable et les directions financières dans le recrutement de leurs talents — du profil junior au futur associé.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">Expertise Comptable</span>
+      <span class="hero-pill">Audit</span>
+      <span class="hero-pill">Finance &amp; Conseil</span>
+      <span class="hero-pill">Social &amp; Juridique</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="#metiers" class="btn-primary">Nos Métiers</a>
+      <a href="#contact" class="btn-outline">Nous Contacter</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>Défiler</span></div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><h3>+200</h3><p>Placements réalisés</p></div>
+    <div class="stat-item"><h3>4</h3><p>Pôles d'expertise</p></div>
+    <div class="stat-item"><h3>48h</h3><p>Délai de réponse</p></div>
+    <div class="stat-item"><h3>97%</h3><p>Taux de satisfaction</p></div>
+  </div>
+</div>
+
+<!-- MÉTIERS -->
+<section id="metiers" class="section">
+  <div class="section-inner">
+    <div class="section-tag">Nos métiers</div>
+    <h2 class="section-title">4 pôles d'expertise<br>pour vos recrutements</h2>
+    <p class="section-desc" style="margin-bottom:2.5rem">YM Consulting couvre l'ensemble du spectre des métiers du chiffre, du droit et de la finance. Chaque pôle est géré par un consultant dédié, expert de son domaine.</p>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('ec')">Expertise Comptable</button>
+      <button class="tab-btn" onclick="switchTab('audit')">Audit</button>
+      <button class="tab-btn" onclick="switchTab('conseil')">Conseil &amp; Finance</button>
+      <button class="tab-btn" onclick="switchTab('social')">Social &amp; Juridique</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-ec">
+      <div class="metier-header">
+        <h3>Expertise Comptable</h3>
+        <p>Recrutement spécialisé pour les cabinets d'expertise comptable, de la prise de poste junior à la future association. Nous identifions des profils qualifiés, motivés et alignés avec la culture de votre cabinet.</p>
+      </div>
+      <div class="profils-grid">
+        <div class="profil-card"><div class="level">Niveau 1</div><h4>Assistant Comptable</h4><p>BTS/DCG — 0 à 2 ans</p></div>
+        <div class="profil-card"><div class="level">Niveau 2</div><h4>Collaborateur Comptable</h4><p>DCG/DSCG — 2 à 5 ans</p></div>
+        <div class="profil-card"><div class="level">Niveau 3</div><h4>Chef de Mission</h4><p>DSCG/DEC — 5 à 8 ans</p></div>
+        <div class="profil-card"><div class="level">Niveau 4</div><h4>Manager Expertise</h4><p>Expert-Comptable stagiaire — 8 à 12 ans</p></div>
+        <div class="profil-card"><div class="level">Niveau 5</div><h4>Expert-Comptable Diplômé</h4><p>DEC — Profil confirmé senior</p></div>
+        <div class="profil-card"><div class="level">Niveau 6</div><h4>Futur Associé</h4><p>Profil d'entrée au capital</p></div>
+      </div>
+      <div class="missions-block">
+        <h4>Missions types recrutées</h4>
+        <div class="missions-list">
+          <div class="mission-item">Tenue et révision des comptes</div>
+          <div class="mission-item">Établissement des bilans et liasses fiscales</div>
+          <div class="mission-item">Conseil fiscal et optimisation</div>
+          <div class="mission-item">Supervision d'un portefeuille clients</div>
+          <div class="mission-item">Management d'équipe comptable</div>
+          <div class="mission-item">Développement commercial cabinet</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-audit">
+      <div class="metier-header">
+        <h3>Audit</h3>
+        <p>De l'auditeur junior débutant sa carrière au futur associé commissaire aux comptes, nous accompagnons les cabinets d'audit dans la constitution et le renforcement de leurs équipes.</p>
+      </div>
+      <div class="profils-grid">
+        <div class="profil-card"><div class="level">Niveau 1</div><h4>Auditeur Junior</h4><p>Bac+5 — 0 à 2 ans</p></div>
+        <div class="profil-card"><div class="level">Niveau 2</div><h4>Auditeur Senior</h4><p>2 à 5 ans d'expérience</p></div>
+        <div class="profil-card"><div class="level">Niveau 3</div><h4>Superviseur Audit</h4><p>5 à 7 ans — Gestion d'équipe</p></div>
+        <div class="profil-card"><div class="level">Niveau 4</div><h4>Manager Audit</h4><p>7 à 10 ans — Pilotage missions</p></div>
+        <div class="profil-card"><div class="level">Niveau 5</div><h4>Directeur de Mission</h4><p>Profil Senior 10 ans+</p></div>
+        <div class="profil-card"><div class="level">Niveau 6</div><h4>Associé / Futur Associé</h4><p>CAC signataire ou en devenir</p></div>
+      </div>
+      <div class="missions-block">
+        <h4>Missions types recrutées</h4>
+        <div class="missions-list">
+          <div class="mission-item">Commissariat aux comptes (CAC)</div>
+          <div class="mission-item">Audit légal et contractuel</div>
+          <div class="mission-item">Audit d'acquisition (due diligence)</div>
+          <div class="mission-item">Contrôle interne et risques</div>
+          <div class="mission-item">Audit des systèmes d'information</div>
+          <div class="mission-item">Certification des comptes consolidés</div>
+          <div class="mission-item">Audit de conformité réglementaire</div>
+          <div class="mission-item">Revue des processus financiers</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-conseil">
+      <div class="metier-header">
+        <h3>Conseil &amp; Finance</h3>
+        <p>Nous recrutons des profils de haute valeur pour les missions d'accompagnement des directions financières, d'optimisation de la fonction finance et de management de transition.</p>
+      </div>
+      <div class="profils-grid">
+        <div class="profil-card"><div class="level">Profil</div><h4>RAF Externalisé</h4><p>Responsable Admin. &amp; Financier</p></div>
+        <div class="profil-card"><div class="level">Profil</div><h4>DAF Externalisé</h4><p>Direction Financière à temps partagé</p></div>
+        <div class="profil-card"><div class="level">Profil</div><h4>Manager de Transition</h4><p>Mission courte à moyenne durée</p></div>
+        <div class="profil-card"><div class="level">Profil</div><h4>Consultant Finance</h4><p>Accompagnement direction financière</p></div>
+        <div class="profil-card"><div class="level">Profil</div><h4>Contrôleur de Gestion</h4><p>Junior à Senior / Confirmé</p></div>
+        <div class="profil-card"><div class="level">Profil</div><h4>Directeur Financier</h4><p>Profil C-Level expérimenté</p></div>
+      </div>
+      <div class="missions-block">
+        <h4>Missions types recrutées</h4>
+        <div class="missions-list">
+          <div class="mission-item">Accompagnement et structuration de la direction financière</div>
+          <div class="mission-item">Optimisation de la fonction finance et des processus</div>
+          <div class="mission-item">Mission de RAF ou DAF externalisé / temps partagé</div>
+          <div class="mission-item">Management de transition en période de crise ou croissance</div>
+          <div class="mission-item">Mise en place d'outils de pilotage et reporting</div>
+          <div class="mission-item">Accompagnement à la levée de fonds et due diligence</div>
+          <div class="mission-item">Restructuration et optimisation des coûts</div>
+          <div class="mission-item">Préparation à la transmission ou cession d'entreprise</div>
+          <div class="mission-item">Déploiement ERP et digitalisation de la finance</div>
+          <div class="mission-item">Contrôle de gestion et construction budgétaire</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-social">
+      <div class="metier-header">
+        <h3>Social &amp; Juridique</h3>
+        <p>Spécialistes du recrutement en droit social et droit des affaires, nous vous accompagnons dans la recherche de gestionnaires de paie, responsables RH/sociaux et juristes d'entreprise.</p>
+      </div>
+      <div class="profils-grid">
+        <div class="profil-card"><div class="level">Niveau 1</div><h4>Gestionnaire de Paie Junior</h4><p>0 à 2 ans — logiciels paie</p></div>
+        <div class="profil-card"><div class="level">Niveau 2</div><h4>Gestionnaire de Paie Senior</h4><p>3 à 7 ans — multi-conventions</p></div>
+        <div class="profil-card"><div class="level">Niveau 3</div><h4>Responsable Social</h4><p>Pilotage d'un service paie/RH</p></div>
+        <div class="profil-card"><div class="level">Niveau 4</div><h4>Chef de Département Social</h4><p>Management équipe &amp; stratégie</p></div>
+        <div class="profil-card"><div class="level">Niveau 5</div><h4>Juriste Droit Social</h4><p>Relations collectives, contentieux</p></div>
+        <div class="profil-card"><div class="level">Niveau 6</div><h4>Juriste Droit des Affaires</h4><p>Contrats, M&amp;A, conformité</p></div>
+      </div>
+      <div class="missions-block">
+        <h4>Missions types recrutées</h4>
+        <div class="missions-list">
+          <div class="mission-item">Gestion de la paie mono et multi-conventions</div>
+          <div class="mission-item">Administration du personnel et déclarations sociales</div>
+          <div class="mission-item">Relations avec les organismes sociaux (URSSAF, retraite)</div>
+          <div class="mission-item">Contentieux prud'homal et disciplinaire</div>
+          <div class="mission-item">Rédaction de contrats de travail et accords d'entreprise</div>
+          <div class="mission-item">Rédaction et négociation de contrats commerciaux</div>
+          <div class="mission-item">Accompagnement juridique des opérations M&amp;A</div>
+          <div class="mission-item">Veille réglementaire et conformité sociale</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROCHE -->
+<section id="approche" class="section">
+  <div class="section-inner">
+    <div class="approche-grid fade-in">
+      <div>
+        <div class="section-tag">Notre approche</div>
+        <h2 class="section-title">Un processus rigoureux au service de votre recrutement</h2>
+        <p class="section-desc" style="margin-bottom:2.5rem">Chaque mission est traitée avec méthode, transparence et réactivité. Nous nous engageons sur des résultats concrets.</p>
+        <div class="etapes">
+          <div class="etape"><span class="etape-num">01</span><div class="etape-content"><h4>Analyse du besoin</h4><p>Compréhension précise du poste, de la culture du cabinet et des critères de sélection</p></div></div>
+          <div class="etape"><span class="etape-num">02</span><div class="etape-content"><h4>Sourcing ciblé</h4><p>Identification des profils via notre réseau, approche directe et bases candidats qualifiées</p></div></div>
+          <div class="etape"><span class="etape-num">03</span><div class="etape-content"><h4>Évaluation approfondie</h4><p>Entretiens de qualification technique et comportemental, vérification des références</p></div></div>
+          <div class="etape"><span class="etape-num">04</span><div class="etape-content"><h4>Présentation &amp; Suivi</h4><p>Présentation d'une shortlist qualifiée et accompagnement jusqu'à l'intégration</p></div></div>
+        </div>
+      </div>
+      <div class="about-visual-box">
+        <div class="logo-big">
+          <svg style="display:block;margin:0 auto 1.5rem" width="72" height="72" viewBox="0 0 72 72" fill="none">
+            <polygon points="9,58 21,14 36,44 51,14 63,58" fill="none" stroke="#C9A84C" stroke-width="3.5" stroke-linejoin="round"/>
+            <line x1="9" y1="58" x2="63" y2="58" stroke="#C9A84C" stroke-width="3.5"/>
+            <circle cx="36" cy="10" r="6" fill="#C9A84C"/>
+          </svg>
+          <div class="logo-big-name">YM <span>Consulting</span></div>
+          <div class="logo-big-sub">Cabinet de Recrutement</div>
+          <div class="logo-divider"></div>
+          <p class="logo-tagline">Spécialiste du recrutement pour les métiers du chiffre, de l'audit et du droit</p>
+          <div class="sector-tags">
+            <span class="sector-tag">Big Four</span>
+            <span class="sector-tag">Mid-Tier</span>
+            <span class="sector-tag">Cabinets indépendants</span>
+            <span class="sector-tag">PME &amp; ETI</span>
+            <span class="sector-tag">Grands comptes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTEURS -->
+<section id="secteurs" class="section">
+  <div class="section-inner">
+    <div class="section-tag" style="color:var(--gold)">Secteurs clients</div>
+    <h2 class="section-title" style="color:#fff">Qui fait appel<br>à YM Consulting ?</h2>
+    <div class="secteurs-grid fade-in">
+      <div class="secteur-item">
+        <svg class="secteur-icon" viewBox="0 0 40 40" fill="none"><rect x="4" y="16" width="32" height="20" stroke="#C9A84C" stroke-width="1.5"/><path d="M12 16V10a8 8 0 0116 0v6" stroke="#C9A84C" stroke-width="1.5"/><circle cx="20" cy="26" r="3" fill="#C9A84C"/></svg>
+        <h3>Cabinets d'Audit</h3>
+        <p>Big Four, cabinets mid-tier et structures indépendantes en recherche d'auditeurs et de managers pour leurs équipes.</p>
+      </div>
+      <div class="secteur-item">
+        <svg class="secteur-icon" viewBox="0 0 40 40" fill="none"><path d="M8 32V20l12-12 12 12v12" stroke="#C9A84C" stroke-width="1.5"/><rect x="15" y="24" width="10" height="8" stroke="#C9A84C" stroke-width="1.5"/></svg>
+        <h3>Cabinets Expertise Comptable</h3>
+        <p>Cabinets régionaux et nationaux cherchant à renforcer leurs équipes ou à structurer leur succession associative.</p>
+      </div>
+      <div class="secteur-item">
+        <svg class="secteur-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="12" stroke="#C9A84C" stroke-width="1.5"/><path d="M20 12v8l5 5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h3>Directions Financières</h3>
+        <p>PME, ETI et grands groupes en quête de RAF, DAF externalisé ou de profils finance de haut niveau.</p>
+      </div>
+      <div class="secteur-item">
+        <svg class="secteur-icon" viewBox="0 0 40 40" fill="none"><path d="M10 28l6-8 6 6 6-10" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="4" width="32" height="32" stroke="#C9A84C" stroke-width="1.5"/></svg>
+        <h3>Conseil &amp; Transaction</h3>
+        <p>Cabinets de conseil en stratégie, fusions-acquisitions et transaction services cherchant des profils analytiques seniors.</p>
+      </div>
+      <div class="secteur-item">
+        <svg class="secteur-icon" viewBox="0 0 40 40" fill="none"><path d="M20 6l14 7v8a14 14 0 01-14 13A14 14 0 016 21v-8l14-7z" stroke="#C9A84C" stroke-width="1.5"/></svg>
+        <h3>Cabinets Juridiques</h3>
+        <p>Études d'avocats et départements juridiques d'entreprises recrutant des juristes droit social et droit des affaires.</p>
+      </div>
+      <div class="secteur-item">
+        <svg class="secteur-icon" viewBox="0 0 40 40" fill="none"><circle cx="16" cy="14" r="5" stroke="#C9A84C" stroke-width="1.5"/><circle cx="28" cy="20" r="4" stroke="#C9A84C" stroke-width="1.5"/><path d="M6 34c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#C9A84C" stroke-width="1.5"/></svg>
+        <h3>Startups &amp; Scale-ups</h3>
+        <p>Jeunes entreprises en forte croissance structurant leur premier département finance, paie ou juridique.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="section-inner">
+    <div class="section-tag">Contact</div>
+    <h2 class="section-title">Parlons de<br>votre besoin</h2>
+    <div class="contact-grid fade-in">
+      <div>
+        <p class="section-desc" style="margin-bottom:2rem">Vous avez un poste à pourvoir ou souhaitez rejoindre notre réseau de candidats ? Contactez-nous, nous vous répondons sous 48h.</p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+            <div><h4>Adresse</h4><p>1 rue de Stockholm<br>75008 Paris, France</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+            <div><h4>Téléphone</h4><p>+33 6 52 25 94 13</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+            <div><h4>Email</h4><p>contact@ymconsulting.fr</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1B2A" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+            <div><h4>Horaires</h4><p>Lun – Ven : 9h00 – 18h30</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group"><label>Prénom &amp; Nom</label><input type="text" placeholder="Votre nom complet"></div>
+          <div class="form-group"><label>Société / Cabinet</label><input type="text" placeholder="Nom de votre structure"></div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="email@cabinet.fr"></div>
+        <div class="form-group"><label>Vous êtes</label>
+          <select>
+            <option value="">Sélectionner votre profil</option>
+            <option>Un cabinet souhaitant recruter</option>
+            <option>Un candidat en recherche active</option>
+            <option>Un candidat en veille passive</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Pôle concerné</label>
+          <select>
+            <option value="">Sélectionner un pôle</option>
+            <option>Expertise Comptable</option>
+            <option>Audit</option>
+            <option>Conseil &amp; Finance</option>
+            <option>Social &amp; Juridique</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Décrivez votre besoin, le poste recherché ou votre profil..."></textarea></div>
+        <button class="submit-btn" onclick="submitForm()">Envoyer la demande →</button>
+        <div class="form-success" id="formSuccess">✓ Message envoyé. Nous vous recontactons sous 48h ouvrées.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <span class="logo-text-nav" style="display:block">YM <span>Consulting</span></span>
+        <p class="footer-tagline">Cabinet de recrutement spécialisé dans les métiers du chiffre, de l'audit, de la finance et du droit. Basé à Paris 8e, nous intervenons partout en France.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Nos pôles</h4>
+        <a href="#metiers" onclick="switchTab('ec')">Expertise Comptable</a>
+        <a href="#metiers" onclick="switchTab('audit')">Audit</a>
+        <a href="#metiers" onclick="switchTab('conseil')">Conseil &amp; Finance</a>
+        <a href="#metiers" onclick="switchTab('social')">Social &amp; Juridique</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="#accueil">Accueil</a>
+        <a href="#approche">Notre Approche</a>
+        <a href="#secteurs">Secteurs</a>
+        <a href="#contact">Contact</a>
+        <a href="#" onclick="openModal();return false;">Codes d'accès</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 YM Consulting — 1 rue de Stockholm, 75008 Paris</span>
+      <span class="footer-address">+33 6 52 25 94 13</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL CODES -->
+<div class="modal-overlay" id="codeModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2>Codes d'accès</h2>
+    <p class="modal-desc">Cliquez sur une section ou saisissez son code pour y accéder directement.</p>
+    <div class="section-codes">
+      <div class="code-item" onclick="goToSection('accueil')"><strong>Accueil</strong><span class="code-val">1000</span></div>
+      <div class="code-item" onclick="goToSection('metiers')"><strong>Nos Métiers</strong><span class="code-val">2000</span></div>
+      <div class="code-item" onclick="goToSection('approche')"><strong>Notre Approche</strong><span class="code-val">3000</span></div>
+      <div class="code-item" onclick="goToSection('secteurs')"><strong>Secteurs Clients</strong><span class="code-val">4000</span></div>
+      <div class="code-item" onclick="goToSection('contact')"><strong>Contact</strong><span class="code-val">5000</span></div>
+    </div>
+    <p class="code-sep">Ou saisissez un code :</p>
+    <div class="code-input-row">
+      <input type="text" maxlength="1" id="d1" oninput="handleInput(this,null,'d2')" inputmode="numeric">
+      <input type="text" maxlength="1" id="d2" oninput="handleInput(this,'d1','d3')" inputmode="numeric">
+      <input type="text" maxlength="1" id="d3" oninput="handleInput(this,'d2','d4')" inputmode="numeric">
+      <input type="text" maxlength="1" id="d4" oninput="handleInput(this,'d3',null)" inputmode="numeric">
+    </div>
+    <div class="code-hint">Codes : 1000 · 2000 · 3000 · 4000 · 5000</div>
+    <button class="code-submit" onclick="checkCode()">Accéder →</button>
+    <div class="code-error" id="codeError">Code invalide. Consultez la liste ci-dessus.</div>
+  </div>
+</div>
+
+<script>
+const codes={'1000':'accueil','2000':'metiers','3000':'approche','4000':'secteurs','5000':'contact'};
+function openModal(){document.getElementById('codeModal').classList.add('open')}
+function closeModal(){document.getElementById('codeModal').classList.remove('open');document.getElementById('codeError').style.display='none';['d1','d2','d3','d4'].forEach(function(id){document.getElementById(id).value=''})}
+document.getElementById('codeModal').addEventListener('click',function(e){if(e.target===this)closeModal()});
+function goToSection(id){closeModal();setTimeout(function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})},200)}
+function handleInput(el,prevId,nextId){if(el.value&&nextId)document.getElementById(nextId).focus()}
+function checkCode(){
+  var code=['d1','d2','d3','d4'].map(function(id){return document.getElementById(id).value}).join('');
+  var err=document.getElementById('codeError');
+  if(codes[code]){err.style.display='none';goToSection(codes[code])}
+  else{err.style.display='block'}
+}
+function switchTab(id){
+  var ids=['ec','audit','conseil','social'];
+  document.querySelectorAll('.tab-btn').forEach(function(b,i){b.classList.toggle('active',ids[i]===id)});
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.toggle('active',p.id==='tab-'+id)});
+}
+function submitForm(){var s=document.getElementById('formSuccess');s.style.display='block';setTimeout(function(){s.style.display='none'},5000)}
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.12});
+document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el)});
+</script>
+</body>
+</html>
